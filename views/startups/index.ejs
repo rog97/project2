@@ -1,0 +1,25 @@
+<div id="menu-wrapper" class="closed">
+      <ul id="menu">
+        <li><a href="/startups">Home</a></li>
+        <li><a href="/startups/new">New Startup</a></li>
+        <li><a href="#">Verticals</a></li>
+      </ul>
+    </div>
+    <div id="content-wrapper" class="closed">
+		<div id="hamburger-button">
+        	<span></span>
+        	<span></span>
+        	<span></span>
+      	</div>
+  		<h1>Startup Index</h1>
+  		<div id="index">
+			<dl>
+				<% startups.forEach(function (startup, i) { %>
+					<a href="/startups/<%= startup._id %>">
+						<dt><%= startup.name %></dt>
+					</a>
+				<% }); %>
+			</dl>
+			<a href="/startups/new">New Startup</a>
+		</div>
+	</div>

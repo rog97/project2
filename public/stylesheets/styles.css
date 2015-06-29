@@ -1,0 +1,332 @@
+/* ---------- WELCOME/LOGIN PAGE CSS ---------- */
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.welcome {
+	position: relative;
+    width: 24vw;
+    min-width: 320px;
+    padding-top: 10vh;
+    height: auto;
+    text-align: center;
+}
+
+.welcome img {
+	width: 100%;
+	height: auto;
+}
+
+.welcome h1 {
+	font-size: 6vw;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 700;
+}
+
+.welcome p {
+	position: relative;
+	font-size: 1.5vw;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	margin: 0 auto;
+	text-align: center;
+	left: 1vw;
+}
+
+.welcome form {
+	display: block;
+}
+
+.welcome input {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin: 3px;
+	padding: 0.5vw .5vw 0.5vw .5vw;
+	font-size: 0.9vw;
+	width: 20vw;
+	height: 5vh;
+	font-family: "Open Sans", sans-serif;
+	border-radius: 1px;
+	border: 1px solid lightgrey;
+}
+
+.welcome input:focus {
+	outline: none;
+}
+
+#intro a {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	display: inline-block;
+	margin: 3px;
+	padding: 0.5vw .5vw 0.5vw .5vw;
+	font-size: 1vw;
+	color: #fff;
+	width: 10vw;
+	height: 5vh;
+	background-color: #fa4542;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bolder;
+	box-shadow: 0 2px 0 0 #be0201;
+	border-radius: 2px;
+	border: 1px solid #fa4542;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+}
+
+#intro a:hover {
+	background-color: #e50000;
+}
+
+input[type=submit] {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin: 3px;
+	padding: 0.5vw .5vw 0.5vw .5vw;
+	font-size: 1vw;
+	color: #fff;
+	width: 20vw;
+	height: 5vh;
+	background-color: #fa4542;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bolder;
+	box-shadow: 0 2px 0 0 #be0201;
+	border-radius: 2px;
+	border: 1px solid #fa4542;
+	transition: background-color 0.3s ease-in-out;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	background-color: #e50000;
+}
+
+/* ---------- MAIN CONTENT PAGES ---------- */
+
+#content-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 10px 10px 0 10px;
+	background-color: white;
+	box-shadow: -6px 0px 10px 1px #646464;
+	overflow: auto;
+
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+}
+
+#content-wrapper h1 {
+	font-size: 4vw;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 700;
+}
+
+#content-wrapper.open {
+	left: 150px;
+}
+
+#content-wrapper a {
+	color: orange;
+}
+
+#index {
+	text-align: center;
+	justify-content: left;
+	-webkit-columns: 10vw 2;
+	   -moz-columns: 10vw 2;
+	        columns: 10vw 2;
+}
+
+.formarea {
+	margin: 0 auto;
+	width: 40%;
+}
+.formarea input[type=text] {
+	background-color: #f6f6f6;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.0rem;
+	outline: 0;
+	border: 0;
+	color: #222;
+	display: block;
+	margin: 0 0 1rem 0;
+	padding: 0.8rem;
+	width: 100%;
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+input[type=radio] + label {
+	background-color: rgb(195, 195, 195);
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.0rem;
+	outline: 0;
+	border: 0;
+	color: #222;
+	display: inline-block;
+	margin: 0 0 1rem 0;
+	padding: 0.8rem;
+	width: 200px;
+	text-align: center;
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+input[type=radio] + label:hover {
+	background-color: rgb(220, 220, 220);
+	cursor: pointer;
+}
+
+input[type=radio]:checked + label {
+	background-color: red;
+}
+
+#hamburger-button: {
+	display: inline-block;
+	vertical-align: top;
+	height: 15px;
+	width: 20px;
+}
+
+#hamburger-button:hover {
+	cursor: pointer;
+}
+
+#hamburger-button > span {
+	margin-bottom: 3px;
+	height: 3px;
+	width: 20px;
+	background-color: rgba(70, 70, 70, 0.7);
+	display: block;
+
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+}
+
+#hamburger-button.open span:nth-child(1) {
+	-webkit-transform: translateY(6px) rotate(45deg);
+	   -moz-transform: translateY(6px) rotate(45deg);
+	    -ms-transform: translateY(6px) rotate(45deg);
+	     -o-transform: translateY(6px) rotate(45deg);
+	        transform: translateY(6px) rotate(45deg);
+}
+
+#hamburger-button.open span:nth-child(2) {
+	-webkit-transform: rotateY(90deg);
+	   -moz-transform: rotateY(90deg);
+	    -ms-transform: rotateY(90deg);
+	     -o-transform: rotateY(90deg);
+	        transform: rotateY(90deg);
+}
+
+#hamburger-button.open span:nth-child(3) {
+	-webkit-transform: translateY(-6px) rotate(-45deg);
+	   -moz-transform: translateY(-6px) rotate(-45deg);
+	    -ms-transform: translateY(-6px) rotate(-45deg);
+	     -o-transform: translateY(-6px) rotate(-45deg);
+	        transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ---------- NAVIGATION MENU ---------- */
+
+#menu-wrapper {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	background: gray;
+}
+
+ul#menu {
+	list-style-type: none;
+	padding: 0 30px 0 0;
+}
+
+ul#menu li {
+	border-bottom: 1px solid darkgray;
+}
+
+ul#menu li.selected {
+	background-color: rgba(171, 171, 171, 1);
+}
+
+ul#menu li > a {
+	display: block;
+	padding: 10px 60px 10px 10px;
+	text-decoration: none;
+	font-weight: 300;
+	transition: background-color 0.3s ease-in-out;
+}
+
+ul#menu > li > a:link, a:visited {
+	color: white;
+}
+
+ul#menu > li > a:hover {
+	background-color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

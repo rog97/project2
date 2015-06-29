@@ -1,0 +1,9 @@
+<form action="/startups/<%= startup._id %>/?_method=PATCH" method="post">
+	<label> Startup: </label>
+	<input type="text" name="startup[name]" value="<%= startup.name %>" />
+
+	<label>Description: </label>
+	<textarea name="startup[content]"><%= startup.content %></textarea>
+
+	<input type="submit" value="Update index" />
+</form>

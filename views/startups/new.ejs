@@ -1,0 +1,76 @@
+<div id="menu-wrapper" class="closed">
+      <ul id="menu">
+        <li><a href="/startups">Home</a></li>
+        <li><a href="/startups/new">New Startup</a></li>
+        <li><a href="#">Verticals</a></li>
+      </ul>
+    </div>
+    <div id="content-wrapper" class="closed">
+		<div id="hamburger-button">
+        	<span></span>
+        	<span></span>
+        	<span></span>
+      	</div>
+  		<h1>Add a Startup</h1>
+  		<br>
+  		<div class="formarea">
+		<form action="/startups" method="post">
+			<br>
+			<input type="text" name="startup[name]" placeholder="Startup Name" /><br>
+
+			<label>Select Vertical: </label><br>
+				<br>
+				
+				<input type="radio" name="startup[vertical]" value="marketplaces" id="marketplaces" />
+				<label class="radio" for="marketplaces">Marketplaces</label>
+
+				
+				<input type="radio" name="startup[vertical]" value="social" />
+				<label>Social Media</label>
+				
+				
+				<input type="radio" name="startup[vertical]" value="eretail" />
+				<label>e-Tailers</label>
+
+				
+				<input type="radio" name="startup[vertical]" value="enterprise" />
+				<label>Enterprise</label>
+
+				
+				<input type="radio" name="startup[vertical]" value="Fintech" />
+				<label>Fintech</label>
+
+				
+				<input type="radio" name="startup[vertical]" value="Edtech" />
+				<label>Edtech</label>
+
+				
+				<input type="radio" name="startup[vertical]" value="Adtech" />
+				<label>Adtech</label>
+
+				
+				<input type="radio" name="startup[vertical]" value="Biotech" />
+				<label>Biotech</label>
+
+				
+				<input type="radio" name="startup[vertical]" value="AI" />
+				<label>AI</label>
+				
+			<br>
+			
+			<input type="text" name="startup[location]" placeholder="Location" /><br>
+			
+			<input type="text" name="startup[stage]" placeholder="Stage" /><br>
+			
+			<input type="text" name="startup[capitalRaised]" placeholder="$ Raised" /><br>
+			
+			<input type="text" name="startup[hiring]" placeholder="Hiring?" /><br>
+			
+			<input type="text" name="startup[pageOwner]" placeholder="Page Owner" /><br>
+			
+			<textarea name="startup[content]">What does this startup do?</textarea><br>
+
+			<input type="submit" value="Add to Index" />
+		</form>
+		</div>
+	</div>
