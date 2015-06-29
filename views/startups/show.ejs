@@ -1,10 +1,34 @@
-<h1><%= startup.name %></h1>
-<h3><%= startup.pageOwner %></h3>
-<p><%= startup.content %></p>
+<div id="menu-wrapper" class="closed">
+      <ul id="menu">
+        <li><a href="/startups">Home</a></li>
+        <li><a href="/startups/new">New Startup</a></li>
+        <li><a href="#">Verticals</a></li>
+      </ul>
+</div>
+<div id="content-wrapper" class="closed">
+	<div id="hamburger-button">
+    	<span></span>
+    	<span></span>
+    	<span></span>
+  	</div>	
 
-<a href="/startups/<%= startup._id %>/edit">Edit</a>
-<br>
-<br>
-<form action="/startups/<%= startup._id %>/?_method=DELETE" method="post">
-	<input type="submit" value="Delete">
-</form>
+  	<div class="show" id="co">
+		<h1><%= startup.name %></h1>
+		<h2><strong>Vertical: </strong><%= startup.vertical %></h2>
+		<h2><strong>Location: </strong><%= startup.location %></h2>
+		<h2><strong>Stage: </strong><%= startup.stage %></h2>
+		<h2><strong>Capital Raised: </strong><%= startup.capitalRaised %></h2>
+		<h2><strong>Hiring: </strong><%= startup.hiring %></h2>
+		<p><strong>About: </strong><%= startup.content %></p>
+
+		<h3><%= startup.pageOwner %></h3>
+		<h3>Last Updated on: </h3>
+
+		<a href="/startups/<%= startup._id %>/edit">Edit</a>
+		<br>
+		<br>
+		<form action="/startups/<%= startup._id %>/?_method=DELETE" method="post">
+			<input type="submit" value="Delete">
+		</form>
+	</div>
+</div>

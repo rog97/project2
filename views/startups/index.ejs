@@ -12,11 +12,13 @@
         	<span></span>
       	</div>
   		<h1>Startup Index</h1>
+  		<br>
+  		<br>
   		<div id="index">
 			<dl>
 				<% startups.forEach(function (startup, i) { %>
-					<a href="/startups/<%= startup._id %>">
-						<dt><%= startup.name %></dt>
+					<div class="startup"><a href="/startups/<%= startup._id %>">
+						<dt><%= startup.name %></dt></div>
 					</a>
 				<% }); %>
 			</dl>

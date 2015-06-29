@@ -153,7 +153,7 @@ input[type=submit]:hover {
 
 #content-wrapper h1 {
 	font-size: 4vw;
-	padding-top: 0;
+	padding-top: 4%;
 	padding-bottom: 0;
 	margin: 0 auto;
 	text-align: center;
@@ -184,10 +184,10 @@ input[type=submit]:hover {
 	padding: 0.8rem;
 	width: 100%;
 	border-radius: 3px;
-	-webkit-transition: background-color .2s ease-in-out;
-	-moz-transition: background-color .2s ease-in-out;
-	-o-transition: background-color .2s ease-in-out;
-	transition: background-color .2s ease-in-out;
+	-webkit-transition: background-color .15s ease-in-out;
+	-moz-transition: background-color .15s ease-in-out;
+	-o-transition: background-color .15s ease-in-out;
+	transition: background-color .15s ease-in-out;
 }
 
 .formarea input[type=text]:focus {
@@ -208,10 +208,10 @@ input[type=submit]:hover {
 	height: 20em;
 	border-radius: 3px;
 	resize: none;
-	-webkit-transition: background-color .2s ease-in-out;
-	-moz-transition: background-color .2s ease-in-out;
-	-o-transition: background-color .2s ease-in-out;
-	transition: background-color .2s ease-in-out;
+	-webkit-transition: background-color .15s ease-in-out;
+	-moz-transition: background-color .15s ease-in-out;
+	-o-transition: background-color .15s ease-in-out;
+	transition: background-color .15s ease-in-out;
 }
 
 .formarea textarea:focus {
@@ -257,19 +257,22 @@ input[type=checkbox]:checked + label {
 	border: 1px solid #197575;
 }
 
+.formarea [type=submit] {
+	position: relative;
+	left: 22%;
+	margin-bottom: 30px;
+}
+
 #index {
 	width: 60%;
 	margin: 0 auto;
 	justify-content: left;
-	-webkit-columns: 10vw 2;
-	   -moz-columns: 10vw 2;
-	        columns: 10vw 2;
 }
 
 #index a {
 	text-decoration: none;
 	color: #333333;
-	margin: 0px;
+	margin: 5px;
 	-webkit-transition: color .2s ease-in-out;
 	   -moz-transition: color .2s ease-in-out;
 	     -o-transition: color .2s ease-in-out;
@@ -295,8 +298,60 @@ input[type=checkbox]:checked + label {
 	border-bottom-color: orange;
 }
 
-#hamburger-button: {
+.startup {
 	display: inline-block;
+	width: 48%;
+}
+
+#vertical {
+	opacity: 0.7;
+}
+
+/* ---------- SHOW PAGE ---------- */
+
+.show {
+	width: 55%;
+	text-align: left;
+	margin: 0 auto;
+	padding-top: 4%;
+}
+
+#co h1 {
+	font-size: 5vw;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: left;
+	font-weight: 700;
+}
+
+.show h2 {
+	font-size: 1.3vw;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: left;
+	font-weight: 400;
+}
+
+
+.show h3 {
+	font-size: 1vw;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: left;
+	font-weight: 400;
+	opacity: 0.7;
+}
+
+.show p {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+/* ---------- HAMBURGER ---------- */
+
+#hamburger-button {
+	display: inline-block;
+	position: fixed;
 	vertical-align: top;
 	height: 15px;
 	width: 20px;

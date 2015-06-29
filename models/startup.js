@@ -8,8 +8,8 @@ var startupSchema = Schema ({
 	vertical: String,
 	location: String,
 	stage: String,
-	capitalRaised: Number,
-	hiring: Boolean,
+	capitalRaised: String,
+	hiring: String,
 	pageOwner: String,
 	date: {type: Date, default: Date.now},
 	content: String
