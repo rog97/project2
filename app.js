@@ -12,6 +12,9 @@ var express 		= require("express"),
 	mongoose 		= require("mongoose"),
 	morgan 			= require("morgan");
 
+// setting the process port if its defined on Heruko, otherwise default to 3000 (local)
+var PORT = process.env.PORT || 3000;
+
 // ----- SET ----- //
 
 app.set("view engine", "ejs");
@@ -60,7 +63,7 @@ db.on("error", function () {
 
 db.once("open", function () {
 	console.log("Yo' bitch! Database here!");
-	app.listen(3000, function () {
+	app.listen(PORT, function () {
 		console.log("Server is here, fuck face!");
 	});
 });
