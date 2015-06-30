@@ -12,9 +12,11 @@ router.get("/", function (req, res) {
 	Startup.find({}, function (err, startupsArray) {
 		if (err) {
 			console.log(err);
-		} else {
+		} else if (req.session.currentUser) {
 			console.log("startupsArray: " + startupsArray);
 			res.render("startups/index", {startups: startupsArray});
+		} else {
+			res.redirect (301, "/../");
 		};
 	});
 });
@@ -29,6 +31,7 @@ router.get("/new", function (req, res) {
 
 router.post("/", function (req, res) {
 	var newStartup = new Startup(req.body.startup);
+	newStartup.pageOwner = req.session.currentUser;
 	newStartup.save(function (err, startup) {
 		if (err) {
 			console.log(err);
@@ -47,7 +50,7 @@ router.get("/:id", function (req, res) {
 		if (err) {
 			console.log(err);
 		} else {
-			res.render("startups/show", {startup: foundStartup});
+			res.render("startups/show", {startup: foundStartup, currentUser: req.session.currentUser});
 		};
 	});
 });

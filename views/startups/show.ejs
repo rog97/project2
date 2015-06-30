@@ -21,14 +21,17 @@
 		<h2><strong>Hiring: </strong><%= startup.hiring %></h2>
 		<p><strong>About: </strong><%= startup.content %></p>
 
-		<h3><%= startup.pageOwner %></h3>
-		<h3>Last Updated on: </h3>
+		<h3>Created on: <%= startup.date %> </h3>
+		<h3>Author: <%= startup.pageOwner %></h3>
 
-		<a href="/startups/<%= startup._id %>/edit">Edit</a>
-		<br>
-		<br>
-		<form action="/startups/<%= startup._id %>/?_method=DELETE" method="post">
-			<input type="submit" value="Delete">
-		</form>
+		<div id="buttons">
+			<div id="edit">	
+				<a href="/startups/<%= startup._id %>/edit">Edit</a>
+			</div>
+			
+			<form action="/startups/<%= startup._id %>/?_method=DELETE" method="post">
+				<input type="submit" value="Delete">
+			</form>
+		</div>
 	</div>
 </div>

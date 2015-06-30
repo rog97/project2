@@ -1,9 +1,76 @@
-<form action="/startups/<%= startup._id %>/?_method=PATCH" method="post">
-	<label> Startup: </label>
-	<input type="text" name="startup[name]" value="<%= startup.name %>" />
+<div id="menu-wrapper" class="closed">
+      <ul id="menu">
+        <li><a href="/startups">Home</a></li>
+        <li><a href="/startups/new">New Startup</a></li>
+        <li><a href="#">Verticals</a></li>
+      </ul>
+    </div>
+    <div id="content-wrapper" class="closed">
+		<div id="hamburger-button">
+        	<span></span>
+        	<span></span>
+        	<span></span>
+      	</div>
+  		<h1>Edit <%= startup.name %></h1>
+  		<br>
+  		<div class="formarea">		
 
-	<label>Description: </label>
-	<textarea name="startup[content]"><%= startup.content %></textarea>
 
-	<input type="submit" value="Update index" />
-</form>
+		<form action="/startups/<%= startup._id %>/?_method=PATCH" method="post">
+			<input type="text" name="startup[name]" placeholder="Startup Name" value="<%= startup.name %>" /><br>
+
+			<label id="vertical">Select a Vertical: </label><br>
+				<br>
+				
+				<input type="checkbox" name="startup[vertical]" value="Marketplaces" id="Marketplaces" />
+				<label class="checkbox" for="Marketplaces">Marketplace</label>
+
+				
+				<input type="checkbox" name="startup[vertical]" value="Social" id="Social" />
+				<label class="checkbox" for="Social">Social Media</label>
+				
+				
+				<input type="checkbox" name="startup[vertical]" value="e-Retail" id="e-Retail" />
+				<label class="checkbox" for="e-Retail">e-Tailer</label>
+
+				
+				<input type="checkbox" name="startup[vertical]" value="Enterprise" id="Enterprise" />
+				<label class="checkbox" for="Enterprise">Enterprise</label>
+
+				
+				<input type="checkbox" name="startup[vertical]" value="Fintech" id="Fintech" />
+				<label class="checkbox" for="Fintech">Fintech</label>
+
+				
+				<input type="checkbox" name="startup[vertical]" value="Edtech" id="Edtech" />
+				<label class="checkbox" for="Edtech">Edtech</label>
+
+				
+				<input type="checkbox" name="startup[vertical]" value="Adtech" id="Adtech" />
+				<label class="checkbox" for="Adtech">Adtech</label>
+
+				
+				<input type="checkbox" name="startup[vertical]" value="Biotech" id="Biotech" />
+				<label class="checkbox" for="Biotech">Biotech</label>
+
+				
+				<input type="checkbox" name="startup[vertical]" value="AI" id="AI" />
+				<label class="checkbox" for="AI">AI</label>
+			<br>	
+			<br>
+			
+			<input type="text" name="startup[location]" placeholder="Location" value="<%= startup.location %>" /><br>
+			
+			<input type="text" name="startup[stage]" placeholder="Stage" value="<%= startup.stage %>" /><br>
+			
+			<input type="text" name="startup[capitalRaised]" placeholder="$ Raised" value="<%= startup.capitalRaised %>" /><br>
+			
+			<input type="text" name="startup[hiring]" placeholder="Hiring?" value="<%= startup.hiring %>"/><br>
+			
+			<input type="text" name="startup[pageOwner]" placeholder="Page Owner" value="<%= startup.pageOwner %>" /><br>
+
+
+			<textarea name="startup[content]" placeholder="What does this startup do? Keep it nice and pithy :)"><%= startup.content %></textarea>
+
+			<input type="submit" value="Update <%= startup.name %>" />
+		</form>
