@@ -14,6 +14,7 @@ var express 		= require("express"),
 
 // setting the process port if its defined on Heruko, otherwise default to 3000 (local)
 var PORT = process.env.PORT || 3000;
+var MONGOURI = process.env.MONGOLAB_URI || "mongodb://localhost:27017/wiki";
 
 // ----- SET ----- //
 
@@ -55,7 +56,7 @@ app.use(function (req, res) {
 
 // ---------- ACTIVATE DATABASE & SERVER ---------- //
 
-mongoose.connect("mongodb://localhost:27017/wiki")
+mongoose.connect(MONGOURI)
 var db = mongoose.connection;
 db.on("error", function () {
 	console.log("OUCH - you fucked up the database!");
