@@ -2,7 +2,8 @@
 
 var express = require("express"),
 	router 	= express.Router(),
-	User 	= require("../models/user.js");
+	User 	= require("../models/user.js"),
+	bcrypt	= require("bcrypt");
 
 // ---------- RESTful ROUTES ---------- //
 
@@ -15,9 +16,16 @@ router.get("/new", function (req, res) {
 // ----- CREATE ----- //
 
 router.post("/", function (req, res) {
-	var newUser = new User(req.body.user);
-	newUser.save(function (err, user) {
-		res.redirect(301, "../");
+	bcrypt.genSalt(10, function (err, salt) {
+		bcrypt.hash(req.body.user.password, salt, function (err, hash) {
+			req.body.user.password = hash;
+			console.log(hash);
+			var newUser = new User(req.body.user);
+			//saving user into database
+			newUser.save(function (err, user) {
+				res.redirect(301, "../");
+			});
+		});
 	});
 });
 
@@ -30,9 +38,15 @@ router.get("/login", function (req, res) {
 router.post("/login", function (req, res) {
 	var loginAttempt = req.body.user;
 	User.findOne({username: loginAttempt.username}, function (err, user) {
-		if (user && user.password === loginAttempt.password) {
-			req.session.currentUser = user.username;
-			res.redirect(301, "../startups");
+		if (user) {
+			bcrypt.compare(loginAttempt.password, user.password, function (err, checked) {
+				if (checked) {
+					req.session.currentUser = user.username;
+					res.redirect(301, "../startups");
+				} else {
+					res.redirect(301, "/users/login");
+				};
+			});
 		} else {
 			res.redirect(301, "/users/login");
 		};

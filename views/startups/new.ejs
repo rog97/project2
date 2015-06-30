@@ -61,13 +61,32 @@
 			
 			<input type="text" name="startup[location]" placeholder="Location" /><br>
 			
-			<input type="text" name="startup[stage]" placeholder="Stage" /><br>
+			<label id="stage">Select a Stage: </label><br>
+				<br>
+				
+				<input type="radio" name="startup[stage]" value="Seed" id="Seed" />
+				<label class="radio" for="Seed">Seed</label>
+
+				<input type="radio" name="startup[stage]" value="Series A" id="Series A" />
+				<label class="radio" for="Series A">Series A</label>
+				
+				<input type="radio" name="startup[stage]" value="Series B" id="Series B" />
+				<label class="radio" for="Series B">Series B</label>
+
+				<input type="radio" name="startup[stage]" value="Series C" id="Series C" />
+				<label class="radio" for="Series C">Series C</label>
+
+				<input type="radio" name="startup[stage]" value="Series D" id="Series D" />
+				<label class="radio" for="Series D">Series D</label>
+
+				<input type="radio" name="startup[stage]" value="Late-Stage" id="Late-Stage" />
+				<label class="radio" for="Late-Stage">Late-Stage</label>
+			<br>
+			<br>
 			
 			<input type="text" name="startup[capitalRaised]" placeholder="$ Raised" /><br>
 			
 			<input type="text" name="startup[hiring]" placeholder="Hiring:" /><br>
-			
-			<input type="text" name="startup[pageOwner]" placeholder="Page Owner" /><br>
 			
 			<textarea name="startup[content]" placeholder="What does this startup do? Keep it nice and pithy :)"></textarea><br>
 

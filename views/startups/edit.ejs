@@ -25,50 +25,69 @@
 				<input type="checkbox" name="startup[vertical]" value="Marketplaces" id="Marketplaces" />
 				<label class="checkbox" for="Marketplaces">Marketplace</label>
 
-				
 				<input type="checkbox" name="startup[vertical]" value="Social" id="Social" />
-				<label class="checkbox" for="Social">Social Media</label>
-				
+				<label class="checkbox" for="Social">Social</label>
 				
 				<input type="checkbox" name="startup[vertical]" value="e-Retail" id="e-Retail" />
-				<label class="checkbox" for="e-Retail">e-Tailer</label>
+				<label class="checkbox" for="e-Retail">e-Tail</label>
 
-				
 				<input type="checkbox" name="startup[vertical]" value="Enterprise" id="Enterprise" />
 				<label class="checkbox" for="Enterprise">Enterprise</label>
 
-				
-				<input type="checkbox" name="startup[vertical]" value="Fintech" id="Fintech" />
-				<label class="checkbox" for="Fintech">Fintech</label>
+				<input type="checkbox" name="startup[vertical]" value="FinTech" id="FinTech" />
+				<label class="checkbox" for="FinTech">FinTech</label>
 
-				
-				<input type="checkbox" name="startup[vertical]" value="Edtech" id="Edtech" />
-				<label class="checkbox" for="Edtech">Edtech</label>
+				<input type="checkbox" name="startup[vertical]" value="EdTech" id="EdTech" />
+				<label class="checkbox" for="EdTech">EdTech</label>
 
-				
-				<input type="checkbox" name="startup[vertical]" value="Adtech" id="Adtech" />
-				<label class="checkbox" for="Adtech">Adtech</label>
+				<input type="checkbox" name="startup[vertical]" value="AdTech" id="AdTech" />
+				<label class="checkbox" for="AdTech">AdTech</label>
 
-				
-				<input type="checkbox" name="startup[vertical]" value="Biotech" id="Biotech" />
-				<label class="checkbox" for="Biotech">Biotech</label>
+				<input type="checkbox" name="startup[vertical]" value="HealTech" id="HealthTech" />
+				<label class="checkbox" for="HealthTech">HealthTech</label>
 
-				
-				<input type="checkbox" name="startup[vertical]" value="AI" id="AI" />
-				<label class="checkbox" for="AI">AI</label>
+				<input type="checkbox" name="startup[vertical]" value="Big Data" id="Big Data" />
+				<label class="checkbox" for="Big Data">Big Data</label>
+
+				<input type="checkbox" name="startup[vertical]" value="Security" id="Security" />
+				<label class="checkbox" for="Security">Security</label>
+
+				<input type="checkbox" name="startup[vertical]" value="Hardware" id="Hardware" />
+				<label class="checkbox" for="Hardware">Hardware</label>
+
+				<input type="checkbox" name="startup[vertical]" value="Other" id="Other" />
+				<label class="checkbox" for="Other">Other</label>
 			<br>	
 			<br>
 			
 			<input type="text" name="startup[location]" placeholder="Location" value="<%= startup.location %>" /><br>
 			
-			<input type="text" name="startup[stage]" placeholder="Stage" value="<%= startup.stage %>" /><br>
+			<label id="Stage">Select a Stage: </label><br>
+				<br>
+				
+				<input type="radio" name="startup[stage]" value="Seed" id="Seed" />
+				<label class="radio" for="Seed">Seed</label>
+
+				<input type="radio" name="startup[stage]" value="Series A" id="Series A" />
+				<label class="radio" for="Series A">Series A</label>
+				
+				<input type="radio" name="startup[stage]" value="Series B" id="Series B" />
+				<label class="radio" for="Series B">Series B</label>
+
+				<input type="radio" name="startup[stage]" value="Series C" id="Series C" />
+				<label class="radio" for="Series C">Series C</label>
+
+				<input type="radio" name="startup[stage]" value="Series D" id="Series D" />
+				<label class="radio" for="Series D">Series D</label>
+
+				<input type="radio" name="startup[stage]" value="Late-Stage" id="Late-Stage" />
+				<label class="radio" for="Late-Stage">Late-Stage</label>
+			<br>
+			<br>
 			
 			<input type="text" name="startup[capitalRaised]" placeholder="$ Raised" value="<%= startup.capitalRaised %>" /><br>
 			
 			<input type="text" name="startup[hiring]" placeholder="Hiring?" value="<%= startup.hiring %>"/><br>
-			
-			<input type="text" name="startup[pageOwner]" placeholder="Page Owner" value="<%= startup.pageOwner %>" /><br>
-
 
 			<textarea name="startup[content]" placeholder="What does this startup do? Keep it nice and pithy :)"><%= startup.content %></textarea>
 
