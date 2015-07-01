@@ -42,6 +42,7 @@ router.post("/login", function (req, res) {
 			bcrypt.compare(loginAttempt.password, user.password, function (err, checked) {
 				if (checked) {
 					req.session.currentUser = user.username;
+					console.log(user);
 					res.redirect(301, "../startups");
 				} else {
 					res.redirect(301, "/users/login");
