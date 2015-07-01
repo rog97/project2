@@ -210,7 +210,7 @@ input[type=submit]:focus {
 	padding: 0.8rem;
 	width: 100%;
 	height: 20em;
-	border-radius: 3px;
+	border-radius: 2px;
 	resize: none;
 	-webkit-transition: background-color .15s ease-in-out;
 	-moz-transition: background-color .15s ease-in-out;
